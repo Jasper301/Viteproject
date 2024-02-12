@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <style>
+      /* Flexbox - https://www.w3schools.com/css/css3_flexbox.asp*/
+
+      * {
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .box {
+        border: 1px solid black;
+        color: aliceblue;
+  
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .container {
+        background-color: rgb(123, 123, 123);
+        height: 100vh;
+        display: flex;
+      }
+      #left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      #right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: burlywood;
+      }
+      /* align-self: flex-end; */
+
+      .Card {
+        width: 300px;
+        height: 500px;
+        background-color: aquamarine;
+        color: black;
+      }
+      img {
+        width: 100%;
+      }
+      .upper {
+        background-color: blueviolet;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .lower {
+        background-color: cadetblue;
+        flex: 3;
+      }
+
+      .info {
+        padding: 30px
+      }
+
+      @media  screen and (max-width: 800px) {
+        .container{
+          flex-direction: column;
+        }
+      }
+
+      #left {
+        order: 2;
+      }
+
+      #right {
+        order: 1;
+      }
+  
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box" id="left">
+        <div class="Card">
+          <img src="lataus (3).jpg" alt="">
+          <p> Kivaa</p>
+        </div>
+      </div>
+      <div class="box" id="right">
+        <div class="upper">
+          <h3>OTSIKKO</h3>
+        </div>
+        <div class="lower">ALEMPI 75%</div>
+      </div>
+    </div>
+
+    <!-- Float continues, clearing -->
+
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, quo consequatur dignissimos
+      autem mollitia nobis reprehenderit aliquid ad neque doloremque fugit, itaque cum iusto
+      assumenda? Necessitatibus qui debitis voluptatibus quam! Illo atque laborum nulla cum ad sint,
+      quia, ut ex repellendus quo ducimus ipsa quibusdam laboriosam eos, eius consequatur.
+      Laudantium sed ipsa, sapiente doloremque incidunt repudiandae nam similique nihil voluptas!
+    </p>
+
+    <!-- Responsive images and centering -->
+  </body>
+</html>
