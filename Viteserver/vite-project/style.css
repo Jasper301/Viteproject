@@ -1,7 +1,12 @@
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,6 +14,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -21,6 +29,7 @@ a:hover {
 body {
   min-width: 320px;
   min-height: 100vh;
+  margin: 16px;
 }
 
 h1 {
@@ -33,37 +42,19 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  margin-top: 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  /*background-color: #1a1a1a; */
+  /* background-color: #1a1a1a; */
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -74,16 +65,177 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    /*background-color: #ffffff;*/
+    background-color: #ffffff;
   }
   a:hover {
     color: #747bff;
   }
   button {
     background-color: #f9f9f9;
+  }
+} */
+
+h3 {
+  border-bottom: 1px solid rgb(184, 15, 117);
+  margin-top: 50px;
+}
+
+button.del, button.check, button.update {
+  padding: 0.3rem 0.6rem;
+  margin: 0;
+}
+
+button.update {
+  background-color: #f2e49448;
+}
+
+button.del {
+  background-color: #f2a29448;
+}
+
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+/* Navigaatiolista tyylittely */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff724f;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #c83d3d;
+}
+
+.active {
+  background-color: black;
+}
+
+/* Käyttäjä loggaantunut tyylittely */
+.user {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#name {
+  font-weight: bolder;
+}
+
+/* Taulukon tyylittey */
+/* https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #68535358;
+  cursor: pointer;
+}
+.forms {
+  display: flex; 
+  gap: 30px;
+}
+
+/* Formin tyylittely */
+form {
+  background-color: #009879;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  width: 300px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/* Input kenttien tyylittely */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Koodiesimerkin tyylittely */
+pre {
+  background-color: aliceblue;
+}
+
+#loginResponse, #meResponse {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: smaller;
+  display: block;
+  width: 100%;
+  word-break:break-all;
+}
+
+@media screen and (max-width: 800px) {
+  .forms {
+    flex-direction: column;
   }
 }
