@@ -1,0 +1,118 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background: url("https://wallpaperaccess.com/full/899156.jpg") no-repeat center/ cover;
+}
+.main{
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	background: linear-gradient(to bottom, #5ebcf3, #cdcbdd, #5ebcf3);
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+label{
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 50%;
+	height: 20px;
+	background:#e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 3px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.centered-text {
+  text-align: center;
+  
+}
+
+a {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #2703c7; 
+}
+
+.Register {
+    text-align: center;
+}
+.custom-input {
+    /* Tämä muokkaa vain login buttonia */ 
+    width: 50%;
+    height: 40px;
+    background: #4CAF50;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+	font-size: 18px;
+	color: white;
+}
+
+.loginuser:hover {
+    background-color: #2703c7;
+}
+
+.loginuser:focus {
+    outline: none; 
+}
+
+.input-field {
+    width: 50%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #c41cc7; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+.input-field:focus {
+    outline: none; 
+}
+
+.input-field2 {
+    width: 50%; 
+    padding: 10px; 
+    margin-bottom: 10px;
+    border: 1px solid #c41cc7;
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+.register-button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+.register-button:hover {
+    background-color: #2703c7; 
+}
+

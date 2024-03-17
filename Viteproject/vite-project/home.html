@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <link rel="stylesheet" type="text/css" href="homestyle.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+</head>
+<body>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="info.html">Info</a></li>
+    <li style="float: right" class="active logout"><a href="">Logout</a></li>
+  </ul>
+
+  <div class="user">Hei kirjautunut käyttäjä: <span id="name">NIMI TÄHÄN</span>!</div>
+  <div class="forms">
+    <div style="flex: 1">
+      <pre><code>
+      </code></pre>
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>User Level</th>
+            <th>Info</th>
+            <th>Delete</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+      </table>
+
+      <button class="get_users">Hae users tiedot</button>
+    </div>
+    <div style="flex: 1">
+      <h2 class="update-heading">Update User Information</h2>
+      <form id="updateForm">
+        <label for="newUsername">New Username:</label><br>
+        <input type="text" id="newUsername" name="newUsername" placeholder="Enter new username"><br><br>
+        <label for="newEmail">New Email:</label><br>
+        <input type="email" id="newEmail" name="newEmail" placeholder="Enter new email"><br><br>
+        <button type="submit" class="update-button">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <dialog class="info_dialog">
+    <p>
+      <!-- tänne haetaan yksittäinen valittu käyttäjät -->
+      <!-- <div>UserID: <span>Id</span></div>
+      <div>UserName: <span>Username</span></div>
+      <div>Email: <span>Email</span></div>
+      <div>Role: <span>Role</span></div>  -->
+    </p>
+    <button class="dialog-close-button" autofocus>Close</button>
+  </dialog>
+  <pre>
+  </pre>
+  <button class="get_entry">Hae entries</button>
+
+  <script type="module" src="/home.js"></script>
+</body>
+</html>
