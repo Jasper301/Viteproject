@@ -27,6 +27,8 @@ Käytin Matin esimerkki palvelin backendiä, sillä en julkistanut omaa backendi
  https://hyte-server-teacher.northeurope.cloudapp.azure.com/
 ## listaus ja kuvaus kaikista toiminnallisuuksista, mitä olet toteuttanut
 
+backendiin ei ole tehty mitään muutoksia.
+
 
 Login-sivu: Tämä sivu tarjoaa käyttäjälle mahdollisuuden kirjautua sisään syöttämällä käyttäjänimen ja salasanan. lisäsin login sivulle myös validoinnit eli käyttäjä jos klikkaa login kun kaikki kentät on tyhjiä niin siitä tulee alertti tai jos salsana tai username on väärin siitä tulee alertti ja kun käyttäjä kirjautuu onnistuneesti sisään siitä tulee alertti. login sivulla on myös "register" josta klikkaamalla pääsee register sivulle tekemään käyttäjän.
 
